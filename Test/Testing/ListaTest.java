@@ -1,4 +1,4 @@
-package uy.edu.um.prog2.adt.TADs.Testing;
+package Testing;
 
 import uy.edu.um.prog2.adt.TADs.ListaEnlazada.Lista;
 import uy.edu.um.prog2.adt.TADs.ListaEnlazada.ListaEnlazada;

@@ -1,4 +1,4 @@
-package uy.edu.um.prog2.adt.TADs.Testing;
+package Testing;
 
 public class ArbolBinarioBusquedaTest {
 
