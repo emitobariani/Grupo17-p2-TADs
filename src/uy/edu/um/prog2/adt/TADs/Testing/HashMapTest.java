@@ -1,6 +1,7 @@
 package uy.edu.um.prog2.adt.TADs.Testing;
 
 import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import uy.edu.um.prog2.adt.TADs.HashMap.HashMap;
 
 import static org.junit.jupiter.api.Assertions.*;
