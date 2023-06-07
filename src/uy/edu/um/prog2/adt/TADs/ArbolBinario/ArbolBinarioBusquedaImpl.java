@@ -37,7 +37,11 @@ public class ArbolBinarioBusquedaImpl implements ArbolBinarioBusqueda{
 
 
     @Override
-    public boolean buscar(Nodo nodo, int valor){
+    public boolean buscar(int valor){
+        return buscarNodo(raiz, valor);
+    }
+
+    private boolean buscarNodo(Nodo nodo, int valor){
 
         if(nodo == null){
             return false;
@@ -48,10 +52,10 @@ public class ArbolBinarioBusquedaImpl implements ArbolBinarioBusqueda{
         }
 
         if (valor < nodo.valor){
-            return buscar(nodo.izquierdo, valor);
+            return buscarNodo(nodo.izquierdo, valor);
         }
 
-        return buscar(nodo.derecho, valor);
+        return buscarNodo(nodo.derecho, valor);
 
     }
 
