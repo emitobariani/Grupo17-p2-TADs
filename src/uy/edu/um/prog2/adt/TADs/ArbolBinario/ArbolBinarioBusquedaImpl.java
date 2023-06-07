@@ -61,19 +61,21 @@ public class ArbolBinarioBusquedaImpl implements ArbolBinarioBusqueda{
 
     @Override
     public void eliminar(int valor) {
+        raiz = eliminarNodo(raiz, valor);
+
 
     }
 
-    private Nodo elminarNodo(Nodo raiz, int valor){
+    private Nodo eliminarNodo(Nodo raiz, int valor){
 
         if(raiz == null){
             return null;
         }
 
         if (valor< raiz.valor){
-            raiz.izquierdo = elminarNodo(raiz.izquierdo, valor);
+            raiz.izquierdo = eliminarNodo(raiz.izquierdo, valor);
         } else if (valor > raiz.valor) {
-            raiz.derecho = elminarNodo(raiz.derecho, valor);
+            raiz.derecho = eliminarNodo(raiz.derecho, valor);
         }
         else {
             if (raiz.izquierdo == null){
@@ -83,7 +85,7 @@ public class ArbolBinarioBusquedaImpl implements ArbolBinarioBusqueda{
             }
 
             raiz.valor = minValor((raiz.derecho));
-            raiz.derecho = elminarNodo(raiz.derecho, raiz.valor);
+            raiz.derecho = eliminarNodo(raiz.derecho, raiz.valor);
 
         }
 
